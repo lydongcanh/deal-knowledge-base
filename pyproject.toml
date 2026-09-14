@@ -1,0 +1,33 @@
+[project]
+name = "deal-knowledge-base"
+version = "0.1.0"
+description = "End-to-end POC demo for Ansarada's deal graph knowledge base"
+authors = [
+    {name = "Ted Ly",email = "lydongcanh@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "ladybug (>=0.20.4,<0.21.0)",
+    "streamlit (>=1.63.0,<2.0.0)",
+    "boto3 (>=1.43.93,<2.0.0)",
+    "pandas (>=3.0.5,<4.0.0)",
+    "plotly (>=7.0.0,<8.0.0)",
+    "streamlit-agraph (>=0.0.45,<0.0.46)",
+    "pyvis (>=0.3.2,<0.4.0)",
+    "python-dotenv (>=1.2.3,<2.0.0)",
+    "pydantic (>=2.13.5,<3.0.0)",
+    "pydantic-settings (>=2.15.0,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "deal_kb", from = "src"}]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+ruff = "^0.9.4"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
