@@ -7,3 +7,7 @@ data/
 .ruff_cache/
 .pytest_cache/
 dist/
+
+# Agent tooling
+.agents/
+.claude/
